@@ -2,7 +2,6 @@ import glob
 from PIL import Image, ImageEnhance
 import PIL
 #use pillow-simd
-import time
 
 z = 0
 factor = -1000
