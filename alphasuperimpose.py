@@ -1,7 +1,7 @@
 import glob
 from PIL import Image, ImageEnhance
 import PIL
-import re
+#use pillow-simd
 import time
 
 z = 0
