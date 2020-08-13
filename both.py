@@ -4,9 +4,11 @@ from PIL import Image, ImageEnhance
 #use pillow-simd
 import numpy as np
 import cv2
+import tqdm
 from multiprocessing import Process
 
 def alpha():
+    #UNFINISHED
     z = 0
     factor = -1000
     x = ((z),'.png')
@@ -20,7 +22,6 @@ def alpha():
     	img2 = enhancer.enhance(factor)
     	img2 = img2.resize([512,512],PIL.Image.NEAREST)
     	img.paste(img2, (0,0), img2)
-    	y = str(x)
     	img.save(image.split('/')[1])
     	z = (z) + 1
     	print("ALPHA#:", (z),"/",len(images))
@@ -35,7 +36,7 @@ def super():
     	h, w, c = img2r.shape
     	result = np.zeros((h, w, 3), np.uint8)
     	xx = ((zz),'.png')
-    	img2r = cv2.resize(img2r,(1024,1024), interpolation = cv2.INTER_CUBIC)
+    	img2r = cv2.resize(img2r,(1024,1024), interpolation = cv2.INTER_LINEAR)
     	alpha = np.tile(img2r[..., 3][..., None], 3) / 255.0
     	result = (1. - alpha) * imgr[..., :3] + alpha * img2r[..., :3]
     	cv2.imwrite(imager.split('/')[1],result)
