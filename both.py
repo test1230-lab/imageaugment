@@ -19,6 +19,7 @@ class test(object):
 
     def alpha(self,r0,r1,r2,r3,r4):
         #UNFINISHED
+        print (r0,r1,r2,r3,r4)
         z = 0
         factor = -1000
         x = ((z),'.png')
@@ -37,6 +38,8 @@ class test(object):
         	print("ALPHA#:", (z),"/",len(images))
 
     def super(self,r0,r1,r2,r3,r4):
+        #UNFINISHED
+        print (r0,r1,r2,r3,r4)
         zz = 0
         xx = ((zz),'.png')
         imagesr = glob.glob("faces/*.jpg")
